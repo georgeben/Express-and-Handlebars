@@ -1,0 +1,19 @@
+{
+  "name": "hello_hbs",
+  "version": "1.0.0",
+  "description": "How to use the handle bars view engine with express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app"
+  },
+  "author": "George Ben",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
