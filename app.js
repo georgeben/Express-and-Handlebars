@@ -10,6 +10,7 @@ app.use(express.static(path.resolve(__dirname, "public")));
 
 app.use(bodyParser.urlencoded({extended:false}))
 //Setting the view engine to handle bars
+app.set("views", path.resolve(__dirname, "views"));
 app.engine("handlebars",exphbs({defaultLayout:"main"}));
 app.set("view engine", "handlebars");
 
@@ -17,7 +18,22 @@ app.get("/", (req, res) =>{
     res.render("home");
 });
 
+app.post("/", (req, res) =>{
+    if(!req.body.name || !req.body.email || !req.body.password){
+        res.status(400).send("Please enter all inputs");
+        return;
+    }
 
+    let user = {
+        name:req.body.name,
+        email:req.body.email,
+        password:req.body.password
+    }
+
+    console.log("Registering",user)
+
+    res.render("welcome", user);
+})
 app.use((req, res) =>{
     //res.send("<h1>Hello world</h1>")
 });
