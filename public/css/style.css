@@ -7,9 +7,19 @@ html, body{
 }
 
 body{
+    background-color: #DDD;
+}
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: -20;
 }
 
 .grad{
@@ -23,9 +33,8 @@ body{
 }
 
 header{
-    background-color: #FF5252;
     margin-top:0;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
     text-align: center;
     color: white;
@@ -36,7 +45,66 @@ header h1{
     font-family: 'Pacifico', cursive;
 }
 
-.reg-form{
-    width: 60%;
+main{
+    width: 40%;
     margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #777;
+    padding: 30px 15px;
+}
+
+.reg-form{
+    margin: auto;
+}
+
+.reg-form h4{
+    color: #FF5252;
+}
+
+.reg-form button, .profile button{
+    width: 100%;
+    background-color: #FF5252;
+    color: white;
+    border: none;
+}
+
+.reg-form button:hover, .profile button:hover{
+    background-color: rgb(245, 110, 110);
+}
+
+
+.reg-form button:focus{
+    outline: none;
+}
+
+/* Welcome page */
+.header{
+    background-color: #FF5252;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.profile img{
+    width: 250px;
+    height: 250px;
+    margin-right: 50px;
+}
+
+.profile p{
+    margin-bottom: 0;
+}
+
+.profile button{
+    margin-top: 20px;
 }

@@ -30,12 +30,10 @@ app.post("/", (req, res) =>{
         password:req.body.password
     }
 
-    console.log("Registering",user)
-
     res.render("welcome", user);
 })
 app.use((req, res) =>{
-    //res.send("<h1>Hello world</h1>")
+    res.send("<h1>The page you are trying to visit does not exist!</h1>")
 });
 
-http.createServer(app).listen(3000);
+http.createServer(app).listen(8000, ()=> console.log("Started app on port 8000"));
